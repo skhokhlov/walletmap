@@ -1,0 +1,26 @@
+{
+  "name": "WalletMap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skhokhlov/walletmap.git"
+  },
+  "author": "Sergey Khokhlov <sergey.a.khokhlov@gmail.com>",
+  "license": "Apache",
+  "bugs": {
+    "url": "https://github.com/skhokhlov/walletmap/issues"
+  },
+  "homepage": "https://github.com/skhokhlov/walletmap",
+  "devDependencies": {
+    "gulp": "^3.8.11"
+  },
+  "dependencies": {
+    "express": "^4.12.3",
+    "request": "^2.55.0"
+  }
+}
