@@ -21,8 +21,8 @@ module.exports = function (app, request) {
             url: 'https://api.parse.com/1/classes/Wallet?' + encodeURIComponent('where={"userId":"' + req.query.userId + '"}'),
             method: 'GET',
             headers: {
-                'X-Parse-Application-Id': 'lIAPr66zUkkCH2BKgDYnQiitc2SlgJSmjEJLic8s',
-                'X-Parse-REST-API-Key': '0VqPm0FGKTCluZPHtgqkVNZ0TF6vavMfIIYYSsIj'
+                'X-Parse-Application-Id': process.env.API_ID,
+                'X-Parse-REST-API-Key': process.env.API_KEY
             }
         }, function (error, response, body) {
             if (!error) {
@@ -39,8 +39,8 @@ module.exports = function (app, request) {
             url: 'https://api.parse.com/1/classes/Wallet',
             method: 'POST',
             headers: {
-                'X-Parse-Application-Id': 'lIAPr66zUkkCH2BKgDYnQiitc2SlgJSmjEJLic8s',
-                'X-Parse-REST-API-Key': '0VqPm0FGKTCluZPHtgqkVNZ0TF6vavMfIIYYSsIj',
+                'X-Parse-Application-Id': process.env.API_ID,
+                'X-Parse-REST-API-Key': process.env.API_KEY,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({"name": req.query.name, "amount": Number(req.query.amount), "userId": req.query.userId})
@@ -58,8 +58,8 @@ module.exports = function (app, request) {
             url: 'https://api.parse.com/1/classes/Wallet/' + req.params.objectId,
             method: 'DELETE',
             headers: {
-                'X-Parse-Application-Id': 'lIAPr66zUkkCH2BKgDYnQiitc2SlgJSmjEJLic8s',
-                'X-Parse-REST-API-Key': '0VqPm0FGKTCluZPHtgqkVNZ0TF6vavMfIIYYSsIj'
+                'X-Parse-Application-Id': process.env.API_ID,
+                'X-Parse-REST-API-Key': process.env.API_KEY
             }
         }, function (error, response, body) {
             if (!error) {
